@@ -29,5 +29,7 @@ namespace WebBook.Models
         {
             return new ApplicationDbContext();
         }
+
+        public System.Data.Entity.DbSet<WebBook.Models.Book> Books { get; set; }
     }
 }

@@ -64,9 +64,9 @@ namespace WebBook.Controllers
             return HttpNotFound();
         }
 
-        public ActionResult CreateBook()
+        public ActionResult CreateBookForm()
         {
-
+            return View();
         }
 
     }
