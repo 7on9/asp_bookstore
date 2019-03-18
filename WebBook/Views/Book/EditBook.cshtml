@@ -1,0 +1,44 @@
+﻿@model WebBook.Models.Book
+
+@{
+    ViewBag.Title = "EditBook";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Sửa thông tin sách có mã số @Model.Id</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <div class="form-horizontal">
+        @*<h4>Sửa thông tin sách</h4>*@
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.Id)
+        <div class="row">
+            <div class="col-md-3 ">
+                <img src="@Model.ImageCover" alt="Ảnh bìa nàz" class="img-small"/>
+            </div>
+            <div class="col-md-6">
+                @*<label for="demo">Write your email here:</label>*@
+                <div class="input-group mb-3">
+                    <div class="input-group-append">
+                        <span class="input-group-text wid-100px">Tên sách</span>
+                    </div>
+                    <input type="text" class="form-control" value="@Model.Title" id="txtNewTitle" name="title">
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-append">
+                        <span class="input-group-text wid-100px">Tác giả</span>
+                    </div>
+                    <input type="text" class="form-control" value="@Model.Author" id="demo" name="author">
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
