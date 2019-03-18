@@ -17,7 +17,7 @@
         @Html.HiddenFor(model => model.Id)
         <div class="row">
             <div class="col-md-3 ">
-                <img src="@Model.ImageCover" alt="Ảnh bìa nàz" class="img-small"/>
+                <img src="@Model.ImageCover" alt="Ảnh bìa nàz" class="img-small" onclick="OpenBrowseImg"/>
             </div>
             <div class="col-md-6">
                 @*<label for="demo">Write your email here:</label>*@
@@ -33,8 +33,7 @@
                     </div>
                     <input type="text" class="form-control" value="@Model.Author" id="demo" name="author">
                 </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
-                daddadasd
+                <button type="submit" class="btn btn-primary">Xác nhận chỉnh sửa</button>
             </div>
         </div>
     </div>

@@ -49,8 +49,11 @@ namespace WebBook.Controllers
             books.Add(new Book(1, "Đạo tình", "Chu Ngọc", "/Images/daotinh.jpg"));
             books.Add(new Book(2, "Tây xuất ngọc môn", "Vĩ Ngư", "/Images/tayxuatngocmon.jpg"));
             books.Add(new Book(3, "Mười hai năm, kịch cố nhân", "Mặc Bảo Phi Bảo", "/Images/muoihainam.jpg"));
+            books.Add(new Book(4, "Dụ tình", "Ân Tầm", "/Images/dutinh.jpg"));
+            books.Add(new Book(5, "Khách sạn hoàng tuyền", "Cố Mạn", "/Images/khachsanhoangtuyen.jpg"));
+            books.Add(new Book(6, "Không thể quay lại", "Diệp Lạc Vô Tâm", "/Images/time.png"));
 
-            foreach(Book book in books)
+            foreach (Book book in books)
             {
                 if(book.Id == id)
                 {
@@ -59,6 +62,11 @@ namespace WebBook.Controllers
             }
 
             return HttpNotFound();
+        }
+
+        public ActionResult CreateBook()
+        {
+
         }
 
     }

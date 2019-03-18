@@ -36,25 +36,25 @@ namespace WebBook.Models
         public int Id
         {
             get { return id; }
-            set { id = Id;}
+            set { id = value; }
         }
 
         public string Title
         {
             get { return title; }
-            set { title = Title; }
+            set { title = value; }
         }
 
         public string Author
         {
             get { return author; }
-            set { author = Author; }
+            set { author = value; }
         }
 
         public string ImageCover
         {
             get { return image_cover; }
-            set { image_cover = ImageCover; }
+            set { image_cover = value; }
         }
     }
 }
